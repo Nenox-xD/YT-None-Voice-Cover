@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Language Selector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+    }
+    h1 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px 0;
+      cursor: pointer;
+    }
+    li:hover {
+      background-color: #f0f0f0;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="video-title">Lade Titel...</h1>
+  <h2>Verfügbare Sprachen</h2>
+  <ul id="language-list">
+    <li>Lade Sprachen...</li>
+  </ul>
+  
+  <label>
+    <input type="checkbox" id="auto-original">
+    Immer Originalsprache wählen
+  </label>
+
+  <script src="popup.js"></script>
+</body>
+</html>

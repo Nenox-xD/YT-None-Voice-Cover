@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Original Language",
+  "version": "1.0",
+  "description": "Zeigt verfügbare Sprachen für ein YouTube-Video im Popup an und setzt Originalsprache automatisch.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
